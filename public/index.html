@@ -1,239 +1,89 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Ruby on Rails: Welcome aboard</title>
-    <style type="text/css" media="screen">
-      body {
-        margin: 0;
-        margin-bottom: 25px;
-        padding: 0;
-        background-color: #f0f0f0;
-        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
-        font-size: 13px;
-        color: #333;
-      }
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Locnote</title>
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="script/jquery.fancybox/jquery.fancybox.css" media="screen" />
+<script type="text/javascript" src="script/jquery.js"></script>
+<script type="text/javascript" src="script/jquery.fancybox/jquery.easing.js"></script>
+<script type="text/javascript" src="script/jquery.fancybox/jquery.fancybox.js"></script>
+</head>
 
-      h1 {
-        font-size: 28px;
-        color: #000;
-      }
+<body>
+<div id="warp">
+     <div class="New"></div>
+     <div id="Head">
+       <div class="HeadLeft">
+               <div class="HeadLeftTop">
+                    <a href="#"><img src="images/light.jpg" width="100" height="170" border="0" /></a>
+                    <h1>The Description</h1>
+                    <h2>THE APP</h2>
+               </div>
+               <div class="HeadLeftCenter">
+                    <p>Lorem ipsum dolor sit amet, consectetur<br />adipisicing elit, sed do eiusmod tempor<br />incididunt ut labore et dolore magna aliqua. <br />
+                       Ut enim ad minim veniam.<br />
+                       Curabitur commodo enim et lorem facilisis at adipiscing dolor blandit. Duis vel posuere ligula. </p>
+               </div>
+               <div class="HeadLeftBottom"><a href="#"><img src="images/btn-green.jpg" width="230" height="85" border="0" /></a></div>
+       </div>
+           <div class="HeadCenter"><img src="images/iphone.jpg" width="296" height="600" /></div>
+           <div class="HeadRight">
+                <div class="HeadRightTop">
+                      <p><em>" The app features an intuitive interface that <br />
+                              is extremely easy on the eyes. "</em></p>
+                      <p style=" text-align:right; font-size:14px; margin-top:15px;"><em>---Daivd Pittman</em></p>
+                      <p style=" text-align:right; font-size:10px;"><em>iconnice.com</em></p>
+                </div> 
+                <div class="HeadRightCenter">
+                      <h3><img src="images/arrow-big.jpg" width="22" height="22" style=" margin-right:10px" />Screenshot</h3>
+                </div>  
+                <div class="HeadRightBottom">
+                  <div class="ProOverview">
+                     <div class="ProImg">
+                     <a href="images/pic1big.jpg"><img src="images/pic.jpg" width="91" height="91" border="0" /></a>
+                     <a href="images/pic1big.jpg"><img src="images/pic.jpg" width="91" height="91" border="0" /></a>
+                     <a href="images/pic1big.jpg"><img src="images/pic.jpg" width="91" height="91" border="0" /></a>
+                     <a href="images/pic1big.jpg"><img src="images/pic.jpg" width="91" height="91" border="0" /></a>
+               </div> </div>  </div>  
+           </div>
+     </div>
+     <div id="Contect">
+           <div class="ContectLeft">
+                 <h4>Features</h4>
+             <ul>
+                     <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                     <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                 </ul>
+                <a href="#"><img src="images/learn.jpg" width="87" height="20" border="0" style="margin-left:15px" /></a></div>
+           <div class="ContectRight">
+                <h4>Contact</h4>
+                <p><img src="images/arrow-small.jpg" width="13" height="13" style=" margin-right:10px" />Get in touch with us, or want latest news.</p>
+             <div class="One">
+                          <div class="One_1"></div>
+               <div class="One_2"><input name="textfield" type="text" class="txt" id="textfield" size="55" maxlength="100" value="E-mail address" /></div>
+                          <div style=" clear:both"></div>
+             </div>
+                     <div class="Two">
+                          <div class="Two_1"></div>
+                          <div class="Two_2"><textarea name="textfield2" cols="59" class="txt" id="textfield2">your text</textarea></div>
+                     </div>
+             <img src="images/submit.jpg" class="submit" />
+           </div>
+     </div>
+     <div id="Foot">website design by iconnice.com</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.ProOverview .ProImg a:has(img)').fancybox({
+		'zoomOpacity'			: true,
+		'overlayShow'			: true,
+		'zoomSpeedIn'			: 500,
+		'zoomSpeedOut'			: 500,
+		'hideOnContentClick'	: false
+	});
+}); 
 
-      a  {color: #03c}
-      a:hover {
-        background-color: #03c;
-        color: white;
-        text-decoration: none;
-      }
-
-
-      #page {
-        background-color: #f0f0f0;
-        width: 750px;
-        margin: 0;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      #content {
-        float: left;
-        background-color: white;
-        border: 3px solid #aaa;
-        border-top: none;
-        padding: 25px;
-        width: 500px;
-      }
-
-      #sidebar {
-        float: right;
-        width: 175px;
-      }
-
-      #footer {
-        clear: both;
-      }
-
-
-      #header, #about, #getting-started {
-        padding-left: 75px;
-        padding-right: 30px;
-      }
-
-
-      #header {
-        background-image: url("images/rails.png");
-        background-repeat: no-repeat;
-        background-position: top left;
-        height: 64px;
-      }
-      #header h1, #header h2 {margin: 0}
-      #header h2 {
-        color: #888;
-        font-weight: normal;
-        font-size: 16px;
-      }
-
-
-      #about h3 {
-        margin: 0;
-        margin-bottom: 10px;
-        font-size: 14px;
-      }
-
-      #about-content {
-        background-color: #ffd;
-        border: 1px solid #fc0;
-        margin-left: -55px;
-        margin-right: -10px;
-      }
-      #about-content table {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 11px;
-        border-collapse: collapse;
-      }
-      #about-content td {
-        padding: 10px;
-        padding-top: 3px;
-        padding-bottom: 3px;
-      }
-      #about-content td.name  {color: #555}
-      #about-content td.value {color: #000}
-
-      #about-content ul {
-        padding: 0;
-        list-style-type: none;
-      }
-
-      #about-content.failure {
-        background-color: #fcc;
-        border: 1px solid #f00;
-      }
-      #about-content.failure p {
-        margin: 0;
-        padding: 10px;
-      }
-
-
-      #getting-started {
-        border-top: 1px solid #ccc;
-        margin-top: 25px;
-        padding-top: 15px;
-      }
-      #getting-started h1 {
-        margin: 0;
-        font-size: 20px;
-      }
-      #getting-started h2 {
-        margin: 0;
-        font-size: 14px;
-        font-weight: normal;
-        color: #333;
-        margin-bottom: 25px;
-      }
-      #getting-started ol {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #getting-started li {
-        font-size: 18px;
-        color: #888;
-        margin-bottom: 25px;
-      }
-      #getting-started li h2 {
-        margin: 0;
-        font-weight: normal;
-        font-size: 18px;
-        color: #333;
-      }
-      #getting-started li p {
-        color: #555;
-        font-size: 13px;
-      }
-
-
-      #sidebar ul {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #sidebar ul h3 {
-        margin-top: 25px;
-        font-size: 16px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #ccc;
-      }
-      #sidebar li {
-        list-style-type: none;
-      }
-      #sidebar ul.links li {
-        margin-bottom: 5px;
-      }
-
-    </style>
-    <script type="text/javascript">
-      function about() {
-        info = document.getElementById('about-content');
-        if (window.XMLHttpRequest)
-          { xhr = new XMLHttpRequest(); }
-        else
-          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
-        xhr.open("GET","rails/info/properties",false);
-        xhr.send("");
-        info.innerHTML = xhr.responseText;
-        info.style.display = 'block'
-      }
-    </script>
-  </head>
-  <body>
-    <div id="page">
-      <div id="sidebar">
-        <ul id="sidebar-items">
-          <li>
-            <h3>Browse the documentation</h3>
-            <ul class="links">
-              <li><a href="http://api.rubyonrails.org/">Rails API</a></li>
-              <li><a href="http://stdlib.rubyonrails.org/">Ruby standard library</a></li>
-              <li><a href="http://corelib.rubyonrails.org/">Ruby core</a></li>
-              <li><a href="http://guides.rubyonrails.org/">Rails Guides</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-
-      <div id="content">
-        <div id="header">
-          <h1>Welcome aboard</h1>
-          <h2>You&rsquo;re riding Ruby on Rails!</h2>
-        </div>
-
-        <div id="about">
-          <h3><a href="rails/info/properties" onclick="about(); return false">About your application&rsquo;s environment</a></h3>
-          <div id="about-content" style="display: none"></div>
-        </div>
-
-        <div id="getting-started">
-          <h1>Getting started</h1>
-          <h2>Here&rsquo;s how to get rolling:</h2>
-
-          <ol>
-            <li>
-              <h2>Use <code>rails generate</code> to create your models and controllers</h2>
-              <p>To see all available options, run it without parameters.</p>
-            </li>
-
-            <li>
-              <h2>Set up a default route and remove or rename this file</h2>
-              <p>Routes are set up in config/routes.rb.</p>
-            </li>
-
-            <li>
-              <h2>Create your database</h2>
-              <p>Run <code>rake db:migrate</code> to create your database. If you're not using SQLite (the default), edit <code>config/database.yml</code> with your username and password.</p>
-            </li>
-          </ol>
-        </div>
-      </div>
-
-      <div id="footer">&nbsp;</div>
-    </div>
-  </body>
+</script>
+</body>
 </html>
